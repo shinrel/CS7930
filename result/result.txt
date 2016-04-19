@@ -1,0 +1,11 @@
+#backers:
+Xgboost: 28.7
+linear regression: 66.9
+box-cox transformation: 23.7
+lambda = 0.2
+
+#funding:
+xgboost: 2121
+linear regression: 5320
+box-cox transformation: 1659
+lambda = 0.1515
