@@ -150,7 +150,23 @@ For our proposed regression model, we first find out the best value of $\lambda$
 	\label{fig:LambdaFig}
 	\vspace{-10pt}
 \end{figure*}
-
+\begin{figure*}[!ht]
+	\centering
+	\subfigure[Predicting how many backers will back for a Kickstarter project] % caption for subfigure a
+	{
+		\label{fig:BackerRegressionResult}
+		\includegraphics[width=0.4\linewidth]{figs/BackerRegressionResult.pdf}
+	}
+	\hspace{1cm}
+	\subfigure[predicting how much funding a Kickstarter project can receive] % caption for subfigure b
+	{
+		\label{fig:FundingRegressionResult}
+		\includegraphics[width=0.4\linewidth]{figs/FundingRegressionResult.pdf}
+	}
+	\caption{RMSE of different models for (a) predicting how many backers will back for a Kickstarter project, and (b) predicting how much funding will a Kickstarter project receive}
+	\label{fig:RegressionResult}
+	\vspace{-10pt}
+\end{figure*}
 Figure \ref{fig:LambdaFig} shows the change of loglikelihood when varying the $\lambda$ value. For building the model to predict number of backers, we observed in Figure \ref{fig:lambdaBackers} that at $\lambda-0.2$, the loglikelihood function achieve the highest value. With regard to the model of predicting the amount of funding, it is shown in Figure \ref{fig:lambdaFunding} that we obtained the maximum value of loglikelihood when $\lambda = 0.18$. Hence, we set $\lambda = 0.2$ and 0.18 in the models of predicting number of backers and the amount of funding, respectively.
 
 As a result, we fit the following model for predicting number of backers:
@@ -180,24 +196,6 @@ where $\epsilon$ is the random error and $\epsilon\sim N(0, \sigma^2)$
 %	\vspace{-10pt}
 %\end{figure}
 
-\begin{figure*}[!ht]
-	\centering
-	\subfigure[Predicting how many backers will back for a Kickstarter project] % caption for subfigure a
-	{
-		\label{fig:BackerRegressionResult}
-		\includegraphics[width=0.4\linewidth]{figs/BackerRegressionResult.pdf}
-	}
-	\hspace{1cm}
-	\subfigure[predicting how much funding a Kickstarter project can receive] % caption for subfigure b
-	{
-		\label{fig:FundingRegressionResult}
-		\includegraphics[width=0.4\linewidth]{figs/FundingRegressionResult.pdf}
-	}
-	\caption{RMSE of different models for (a) predicting how many backers will back for a Kickstarter project, and (b) predicting how much funding will a Kickstarter project receive}
-	\label{fig:RegressionResult}
-	\vspace{-10pt}
-\end{figure*}
-
 \textbf{Predicting the amount of funding a Kickstarter project can receive:} we fit our proposed model given in Equation (\ref{equa:model2}) to predict how much funding a Kickstarter project can be funded. We also compared our result with the results we got from linear boosting of Xgboost and linear regression. Figure \ref{fig:FundingRegressionResult} shows RMSE result of 3 models. We notice that our model outperformed linear regression and Xgboost for linear model with lowest RMSE of 1,659. This value is the average error of predicting the amount of funding for a Kickstarter project. 
 
 %\begin{figure}%[!ht]
@@ -207,3 +205,5 @@ where $\epsilon$ is the random error and $\epsilon\sim N(0, \sigma^2)$
 %	\label{fig:FundingRegressionResult}
 %	\vspace{-10pt}
 %\end{figure}
+
+\section{Understanding the influence of factors toward the amount of funding}
