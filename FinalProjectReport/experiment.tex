@@ -207,3 +207,35 @@ where $\epsilon$ is the random error and $\epsilon\sim N(0, \sigma^2)$
 %\end{figure}
 
 \section{Understanding the influence of factors toward the amount of funding}
+
+\begin{table*}[!ht]
+\centering
+\caption{Coefficient of Features}
+\label{coefficient-of-features}
+\begin{tabular}{|l|r|l|r|}
+\hline
+Feature Name & Coefficient & Feature Name & Coefficient \\ \hline \hline
+numProjectComments *** & 23539.09 & cbackedCategories  *** & 230.262 \\ \hline
+numUpdates *** & 2816.502 & cbackedCategories  *** & 202.355 \\ \hline
+cnumFbFriends *** & 1002.85 & cbackedCategories *** & 158.055 \\ \hline
+numRewards *** & 951.701 & cnumBioSentence *** & 141.075 \\ \hline
+Goal *** & 800.64 & numFaqs *** & 134.553 \\ \hline
+previousProjectSuccessRate *** & 779.975 & cbackedCategories * & 89.731 \\ \hline
+numVideos *** & 594.218 & numImages *** & 27.47 \\ \hline
+smogBio *** & 444.779 & cbackedCategories *** & 13.272 \\ \hline
+cbackedCategories *** & 429.861 & cwebsiteCount *** & 7.455 \\ \hline
+backedProjectSuccessfulRate *** & 428.13 & ctwitterConnected *** & -0.5 \\ \hline
+smogMain *** & 341.549 & cbackedCategories ** & -61.033 \\ \hline
+numMainSentences  *** & 335.187 & cyoutubeConnected  *** & -183.622 \\ \hline
+Category  *** & 293.621 & cbackedCategories ** & -249.037 \\ \hline
+cbackedCategories  *** & 291.544 & cfacebookConnected *** & -643.742 \\ \hline
+cbackedCategories  *** & 264.193 & cbackedCategories *** & -697.825 \\ \hline
+cnumCreatorComment  * & 246.34 & cbackedCategories *** & -847.89 \\ \hline
+cbackedCategories  *** & 240.012 & cnumCreated *** & -1915.6 \\ \hline
+\end{tabular}
+\end{table*}
+
+Table \ref{coefficient-of-features} explains which features have more influence on determining the amount of funding. * represent the significance of $\alpha$(*: 0.05, **: 0.01, ***: 0.001). Larger value in coefficient is more impact on prediction of the amount of funding. As table shows, the number of project comments is out-numbering other features as value of 23,540 which is a lot greater than the second ranking attribute of the number updates having 2,817. It is important to response on backers by project owners explaining communication between them is essential element of success.
+
+Besides, some of features have negative relation with the amount of funding. The attribute which has the worst relationship with response is how many times project the creator has published in the past. This explains that backers consider the creator who made a lot in the past tends not to be successful to be funded overtime. The next following features the number of categories the creator has been made in the past. The creator did not focus on one specific area but extend its territories to several realm. Backers might suspect that the creator does not possess specialty on specific object. Backers are likely to avoid the project which project owner has no specialty.
+
